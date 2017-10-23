@@ -1,9 +1,9 @@
 (function() {
-    function HomeCtrl(Task) {
+    function HomeCtrl(Task, $scope) {
         this.tasks = Task.all;
     };
 
     angular
         .module('blocitoff')
-        .controller('HomeCtrl', ['Task', HomeCtrl]);
+        .controller('HomeCtrl', ['Task', '$scope', HomeCtrl]);
 })();

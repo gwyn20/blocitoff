@@ -1,0 +1,16 @@
+<div class='history-window'>
+        <div class='task-type'>
+            <h1>Your Task History</h1>
+        </div>
+        
+        <div class='task-list'>
+                <div ng-repeat='task in home.tasks' ng-class="'historyTask'">
+                    <h4> {{ task.description }} </h4>
+                    <p> {{ task.priority }}</p>
+                    <p style='font-size:10px;'> {{ task.createdAt }} </p>
+                    <div class='task-completed'>
+                        <button class='task-completed-button'>Move To Tasks</button>
+                    </div>
+                </div>
+            </div>
+</div>

@@ -5,11 +5,19 @@
     <title>Blocitoff</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
     <body>
+        <nav class='nav-bar'>
+            <ul>
+                <li><a ui-sref='home'>Tasks</a></li>
+                <li><a ui-sref='history'>History</a></li>
+            </ul>
+
+        </nav>
         <ui-view></ui-view>
 
-        <h4>blocitoff</h4>
+        
 
         <!-- Angular -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -40,6 +48,7 @@
         <!-- Application Files -->
         <script src="/scripts/app.js"></script>
         <script src="/scripts/controllers/HomeCtrl.js"></script>
+        <script src="/scripts/controllers/HistoryCtrl.js"></script>
         <script src="/scripts/factories/Task.js"></script>
     </body>
 </html>
