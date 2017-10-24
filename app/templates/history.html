@@ -1,16 +1,18 @@
 <div class='history-window'>
-        <div class='task-type'>
-            <h1>Your Task History</h1>
-        </div>
         
+    <!--
         <div class='task-list'>
-                <div ng-repeat='task in home.tasks' ng-class="'historyTask'">
-                    <h4> {{ task.description }} </h4>
-                    <p> {{ task.priority }}</p>
-                    <p style='font-size:10px;'> {{ task.createdAt }} </p>
-                    <div class='task-completed'>
-                        <button class='task-completed-button'>Move To Tasks</button>
-                    </div>
-                </div>
+            <h2>Expired Tasks</h2>
+            <div ng-repeat='task in history.tasks' ng-class="'expiredTask'">
+                <span style="font-size:30px;">{{ task.description }}</span> <button class='task-completed-button'>Move to Tasks</button><br> Priority: {{ task.priority }}
             </div>
+        </div>
+        <br>
+        <div class='task-list'>
+            <h2>Completed Tasks</h2>
+            <div ng-repeat='task in history.tasks' ng-class="'completedTask'">
+                <span style="font-size:30px;">{{ task.description }}</span>
+            </div>
+        </div>
+    -->
 </div>

@@ -129,12 +129,23 @@ select {
     width: 100%;
 }
 
-.historyTask {
-    float: left;
-    color: rgba(45,45,45,1);
+.expiredTask {
+    position: relative;
+    color: rgb(134, 73, 73);
     background-color: rgb(255, 255, 255);
     margin-top: 10px;
     padding-left: 20px;
-    height: 50px;
-    width: 85%;
+    height: 70px;
+    width: 100%;
+}
+
+.completedTask {
+    position: relative;
+    color: rgb(119, 167, 115);
+    background-color: rgb(255, 255, 255);
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    height: 70px;
+    width: 100%;
 }
