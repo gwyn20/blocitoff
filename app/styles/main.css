@@ -42,14 +42,14 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     background-color: rgb(100, 133, 160);
-    min-height: 600px;
+    min-height: 2000px;
 }
 
 .history-window {  
     padding-left: 20px;
     padding-right: 20px;
     background-color: rgb(103, 124, 141);
-    min-height: 600px;
+    min-height: 2000px;
 }
 
 .task-type {
@@ -95,21 +95,21 @@ select {
 }
 
 .task-completed-button {
-    float: left;
+    float: right;
     margin-left: 20px;
     background-color: rgb(255, 255, 255);
-    height: 50px;
+    height: 70px;
     width: 100px;
     border-style: none;
 }
 
 .task-completed-button:hover {
-    float: left;
+    float: right;
     margin-left: 20px;
     background-color: rgba(45,45,45,1);
     font-weight: bold;
     color: rgb(255, 255, 255);
-    height: 50px;
+    height: 70px;
     width: 100px;
     border-style: none;
 }
@@ -120,13 +120,21 @@ select {
 }
 
 .activeTask {
+    float: left;
+    color: rgba(45,45,45,1);
     background-color: rgb(255, 255, 255);
-    padding-top: 10px;
-    height: 50px;
+    margin-top: 10px;
+    padding-left: 20px;
+    height: 70px;
+    width: 100%;
 }
 
 .historyTask {
+    float: left;
+    color: rgba(45,45,45,1);
     background-color: rgb(255, 255, 255);
-    padding-top: 10px;
+    margin-top: 10px;
+    padding-left: 20px;
     height: 50px;
+    width: 85%;
 }

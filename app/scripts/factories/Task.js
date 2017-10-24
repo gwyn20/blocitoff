@@ -5,8 +5,8 @@
     
         return {
             all: tasks,
-            addTask: function(newTask) {
-                tasks.$add(task); 
+            addTask: function(taskDescription, taskPriority) {
+                tasks.$add({ description: taskDescription, priority: taskPriority }); 
             }
         }
     };
