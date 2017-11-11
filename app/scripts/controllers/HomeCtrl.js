@@ -3,10 +3,11 @@
         this.tasks = Task.all;
         this.taskManager = Task;
         this.taskCompleted = function(task) {
-            Task.taskCompleted(task);
+            Task.taskStatus(task);
         };
         this.activeTask = function(task) {
-            return task.created > (moment().dayOfYear() - 7) || task.completed == false
+            var expiryDate = moment().subtract(7, 'days').format('MMM Do YY');
+            return task.completed == false && task.created < expiryDate;
         };
     };
 

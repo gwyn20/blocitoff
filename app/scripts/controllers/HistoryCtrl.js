@@ -5,10 +5,11 @@
             Task.taskReset(task);
         };
         this.completedTask = function(task) {
-            return task.completed == true
+            return task.completed == true;
         };
         this.expiredTask = function(task) {
-            return task.created < (moment().dayOfYear() - 7)
+            var expiryDate = moment().subtract(7, 'days').format('MMM Do YY');
+            return task.created > expiryDate;
         };
     };
 
