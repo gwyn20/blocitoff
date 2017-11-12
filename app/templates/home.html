@@ -7,9 +7,9 @@
                 <div class='priority-selector'>
                     <select ng-model='taskPriority' >
                         <option value="" disabled="disabled" selected="selected">Select Priority Level</option>
-                        <option value="High">High</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Low" >Low</option>
+                        <option value="1-High">High</option>
+                        <option value="2-Medium">Medium</option>
+                        <option value="3-Low" >Low</option>
                     </select>
                 </div>
                 <button class='add-task-button' ng-click='home.taskManager.addTask(taskDescription, taskPriority); clearFunction(this)'>Add Task</button>
@@ -18,7 +18,7 @@
     </div>
    
     <div class='task-list'>
-        <div ng-class="'activeTask'" ng-repeat='task in home.tasks' ng-if="home.activeTask(task)">
+        <div ng-class="'activeTask'" ng-repeat="task in home.tasks | orderBy: ['priority', 'created']" ng-if="home.activeTask(task)">
             <span style="font-size:30px;">{{ task.description }}</span> <button class='task-completed-button' ng-click="home.taskCompleted(task)" >Mark As Completed</button><br> Priority: {{ task.priority }} <br> Expires In:  day(s)
         </div>
     </div>
