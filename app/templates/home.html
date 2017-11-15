@@ -19,7 +19,7 @@
    
     <div class='task-list'>
         <div ng-class="'activeTask'" ng-repeat="task in home.tasks | orderBy: ['priority', 'created']" ng-if="home.activeTask(task)">
-            <span style="font-size:30px;">{{ task.description }}</span> <button class='task-completed-button' ng-click="home.taskCompleted(task)" >Mark As Completed</button><br> Priority: {{ task.priority }} <br> Expires In:  day(s)
+            <span style="font-size:30px;">{{ task.description }}</span> <button class='task-completed-button' ng-click="home.taskStatus(task)" >Mark As Completed</button><br> Priority: {{ task.priority }} <br> Expires: {{ task.expires }}
         </div>
     </div>
 </div>

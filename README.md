@@ -1,107 +1,49 @@
-## Bloc Frontend Project Starter
+<h1>Blocitoff</h1>
+A "To-Do List" application built using Firebase API and AnugularJS to create tasks with an expiration date.
+The tasks are prioritised by urgency and expiration date.  The tasks can either me marked as complete or they will automatically expire after 7 days.
 
-A starter application for student projects in Bloc's [Frontend Web Development Course](https://www.bloc.io/frontend-development-bootcamp).
+<h3>The Application</h3> 
+When using Blocitoff you are presented with the ability to add a new task and a list of current incomplete tasks.
 
-## Pull Down the Code
+![Home Screen](/app/assets/images/HomeScreen.jpg)
 
-Start by cloning the repository:
+To create a new task, you simply enter the task description into the text field and select a Priority Level from the drop-down list. Once you have entered your Task details, select 'Add Task' and your task will be added to the list.
 
-```
-$ git clone https://github.com/Bloc/bloc-frontend-project-starter.git <your-frontend-project-name>
-```
+![New Task](/app/assets/images/NewTask.jpg)
 
-## Reset Git
+The tasks are displayed in a list view and ordered by Priority level and expiry date.
 
-This will be your personal project. So all of the past commit history that we used to build this starter app aren't needed. Also you will want to be able to push/pull code from your personal remote (Github) repository and NOT Bloc's remote (Github) repository.
+![Task List](/app/assets/images/TaskList.jpg)
 
-Remove the existing local Git repository:
+Tasks will be removed from this list view once they have been marked as completed or they have reached the expiry date.
 
-```
-$ rm -r -f .git
-```
+To mark a task as being completed, select the 'Mark As Completed' button next to the appropriate task.
 
-Initialize a new Git repository, add all of these existing files, and commit them:
+![Task Complete](/app/assets/images/TaskComplete.jpg)
 
-```
-$ git init
-$ git add .
-$ git commit -m "initial commit"
-```
+Completed and expired tasks can be viewed by selecting the 'History Page'
 
-Go to Github and create a new repository. Add that new repository as the proper remote. Then push your initial commit.
+![History](/app/assets/images/History.jpg)
 
-```
-$ git remote add origin <URL TO NEW GITHUB REPO>
-$ git push origin master
-```
+The first list shows the 'Expired Tasks' along with an option to reset the task if you need more time to complete. Selecting 'Reset Task' will reset the creation and expiration date of the task and move it back to the main window.
 
-## Configuration
+![Reset Task](/app/assets/images/ResetTask.jpg)
 
-The project uses Node to run a JS server in development. This will be important when we want to use urls /album or /collection instead of the basic album.html or collection.html. It may  help to review [our resource on NPM and `package.json` files](https://www.bloc.io/resources/npm-and-package-json).
+Below the 'Expired Tasks' is a list of 'Completed Tasks'
 
-Install the project dependencies by running:
-
-```
-$ npm install
-```
-
-## Run the Application
-
-Run the application server:
-
-```
-$ npm start
-```
-
-The server will start up. To stop the server, press `cntrl + c`.
+![Completed Tasks](/app/assets/images/CompletedTasks.jpg)
 
 
-## Use in Brackets Live Preview
 
-To use the application with the Live Preview functionality of the Brackets text editor, go to __File > Project Settings__ and add `http://localhost:3000` to the Base URL field.
+<h3>Tools Used</h3>
+Angular
 
-![Screenshot of project settings URL in Brackets](https://bloc-global-assets.s3.amazonaws.com/images-frontend/screenshots/bloc-frontend-project-starter/live_preview_project_settings.png)
+JavaScript
 
-The text in the application will not update on every keystroke, but changes will automatically push when you save the file.
+Firebase
 
-## Directory Structure
+HTML
 
-```
-├── LICENSE
-├── README.md
-├── app
-│   ├── assets
-│   │   └── images
-│   │       └── bloc-logo-white.png
-│   ├── pages
-│   │   └── index.html
-│   ├── scripts
-│   │   └── app.js
-│   ├── styles
-│   │   └── style.css
-│   └── templates
-│       └── home.html
-├── package.json
-└── server.js
-```
+Moment.js
 
-
-### Assets/Images
-
-Add images to the `app/assets/images` directory. To reference images in HTML, use the path `/assets/images/<image file name>.jpg`. For example, to include the image called `bloc-white-logo.png`, the path for the `src` attribute in the HTML would be:
-
-```html
-<img src="/assets/images/bloc-white-logo.png">
-```
-
-__Note:__ A sample image has been added to `app/images`. To remove the image from the application, run the following command from the root of repo:
-
-```bash
-$ rm -f app/assets/images/bloc-white-logo.png
-```
-
-To reference any other assets, like the music in Bloc Jams, use the path `assets/<asset-type>/<asset-file-name>`.
-
-### Difference between Pages and Templates
-
-The `templates` directory should hold any HTML files used as templates in Angular states configured by UI Router. All other HTML files belong in the `pages` directory.
+CSS  

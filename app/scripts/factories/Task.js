@@ -3,22 +3,25 @@
         var ref = firebase.database().ref().child('tasks');
         var tasks = $firebaseArray(ref);
 
-        var taskStatus = function(task) {
+        var completeTask = function(task) {
             task.completed = true;
             tasks.$save(task)
         }
 
-        var taskReset = function(task) {
+        var incompleteTask = function(task) {
             task.completed = false;
-            task.created = moment().format("MMM Do YY");
+            task.created = moment().format('L');
+            task.expires = moment().add(7, 'days').format('L');
             tasks.$save(task)
         }
     
         return {
             all: tasks,
             addTask: function(taskDescription, taskPriority) {
-                tasks.$add({ description: taskDescription, priority: taskPriority, created: moment().format("MMM Do YY"), completed: false }); 
-            }
+                tasks.$add({ description: taskDescription, priority: taskPriority, created: moment().format('L'), completed: false, expires: moment().add(7, 'days').format('L') }); 
+            },
+            taskComplete: completeTask,
+            taskIncomplete: incompleteTask
         }
     };
     
